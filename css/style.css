@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/football_field.jpg");
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Asap Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+img{
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
+}
+.team{
+    height: 100vh;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.keeper, .defense, .midfield, .attack{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.defense{
+    height: 95%;
+}
+.defense .card:nth-child(1), .defense .card:nth-child(4){
+    margin-left: 250px;
+}
+.midfield{
+    height: 72%;
+    margin-right: 150px;
+}
+.midfield .card:nth-child(1), .midfield .card:nth-child(3){
+    margin-left: 350px;
+}
+.attack{
+    height: 90%;
+    margin-right: 250px;
+}
+.attack .card:nth-child(2){
+    margin-left: 150px;
+}
+.card {
+    margin: 0 auto;
+    height: 227px;
+    width: 170px;
+    perspective: 1000px;
+    text-align: center;
+}
+.card-inner {
+    position:relative;
+    width: 100%;
+    height:100%;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position:absolute;
+    height:100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius:8px;
+}
+.card-front {
+    background-size:cover;
+    background-position:center center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.card-front-alisson{
+    background-image:url('../img/alisson.jpg');
+}
+.card-front-robertson{
+    background-image:url('../img/robertson.jpg');
+}
+.card-front-virgil{
+    background-image:url('../img/virgil.jpg');
+}
+.card-front-gomez{
+    background-image:url('../img/gomez.jpg');
+}
+.card-front-trent{
+    background-image:url('../img/trent.jpg');
+}
+.card-front-gini{
+    background-image:url('../img/gini.jpg');
+}
+.card-front-fabinho{
+    background-image:url('../img/fabinho.jpg');
+}
+.card-front-henderson{
+    background-image:url('../img/henderson.jpg');
+}
+.card-front-mane{
+    background-image:url('../img/mane.jpg');
+}
+.card-front-firmino{
+    background-image:url('../img/firmino.jpg');
+}
+.card-front-salah{
+    background-image:url('../img/salah.jpg');
+}
+.card-back {
+    transform: rotateY(180deg);
+    background:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-back .card-image {
+    height: 227px;
+    width: 170px;
+    border-radius: 8px;
+    background-size:cover;
+    background-position:center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-back .card-image-alisson{
+    background-image:url('../img/alisson2.jpg');
+}
+.card-back .card-image-robertson{
+    background-image:url('../img/robertson2.jpg');
+}
+.card-back .card-image-virgil{
+    background-image:url('../img/virgil2.jpg');
+}
+.card-back .card-image-gomez{
+    background-image:url('../img/gomez2.jpg');
+}
+.card-back .card-image-trent{
+    background-image:url('../img/trent2.jpg');
+}
+.card-back .card-image-gini{
+    background-image:url('../img/gini2.jpg');
+}
+.card-back .card-image-fabinho{
+    background-image:url('../img/fabinho2.jpg');
+}
+.card-back .card-image-henderson{
+    background-image:url('../img/henderson2.jpg');
+}
+.card-back .card-image-mane{
+    background-image:url('../img/mane2.jpg');
+}
+.card-back .card-image-firmino{
+    background-image:url('../img/firmino2.jpg');
+}
+.card-back .card-image-salah{
+    background-image:url('../img/salah2.jpg');
+}
+.card-front {
+    transition: opacity .6s;
+}
+.card:hover .card-front {
+    opacity:0;
+}
